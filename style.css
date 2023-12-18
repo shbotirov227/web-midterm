@@ -6,6 +6,11 @@
     list-style: none;
 }
 
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
 }
@@ -40,7 +45,6 @@ a {
 }
 
 .block {
-
     text-transform: uppercase;
 }
 
@@ -99,7 +103,6 @@ header {
     -webkit-background-size: cover;
     background-size: cover;
 }
-
 
 .logo {
     font-size: 30px;
@@ -160,7 +163,6 @@ header {
     color: #fff;
     background-color: #6f4826;
 }
-
 
 #services {
     text-align: center;
@@ -273,10 +275,6 @@ header {
     text-align: center;
 }
 
-.about-me-sec {
-    min-height: 100vh;
-}
-
 .about-me-sec hr {
     border: 2px solid red;
     margin-bottom: 2rem;
@@ -325,49 +323,64 @@ header {
     background-color: var(--accent-color);
 }
 
-/* portfolio sec  */
-
 .albom > h3 {
     font-size: 30px;
     margin-bottom: 10px;
-    color: #4b4a4a;
 }
 
-.first img {
+.retro-album_card img {
     width: 100%;
+    margin-bottom: 15px;
 }
 
-.empty_album {
+.retro-album {
     gap: 30px;
+    margin-bottom: 150px;
 }
 
-.first {
+.retro-album_card {
+    width: 25%;
+    height: 100%;
     transition: 0.3s ease;
     cursor: pointer;
-}
-
-.first:hover {
-    transform: scale(1.1);
-    background-color: lavender;
-}
-
-.first h3 {
-    margin-top: 10px;
-}
-
-.first p {
-    margin-top: 5px;
-    line-height: 1.4;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: left;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.first button {
-    margin: 15px;
+.retro-album_card:hover {
+    transform: scale(1.1);
 }
 
-/* experience sec  */
+.retro-album_card h4 {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.retro-album_card p {
+    font-size: 17px;
+    margin: 15px 0 25px 0;
+}
+
+.retro-album_card span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.retro-album_card del {
+    color: red;
+    margin: 0 15px;
+}
+
+.retro-album_card .btn {
+    text-align: right;
+}
+
+.retro-album_card .flex {
+    justify-content: space-between;
+}
 
 .section__items {
     height: 35vh;
@@ -398,10 +411,59 @@ header {
     margin-bottom: 150px;
     background-color: rgb(255, 255, 255);
 }
+
 .prototype {
     color: #c71010;
 }
+
+.meeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.meeting .meeting-card {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 2px solid #757474;
+}
+
+
+.meeting-card h4 {
+    font-size: 20px;
+}
+
+.meeting-card img {
+    border-radius: 10px;
+}
+
+.meeting-card div {
+    padding: 30px;
+}
+
+.meeting-card h5 {
+    color: #757474;
+    font-weight: 500;
+    font-size: 15px;
+    margin: 10px 0 25px 0;
+}
+
+
+.meeting-card .meeting-card-info p {
+    font-weight: 900;
+    font-size: 20px;
+}
+
 .worker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
 }
@@ -525,4 +587,549 @@ footer ul li {
 .footer-link {
     font-size: 15px;
     color: #fff;
+}
+
+
+
+.burger-btn {
+    display: none;
+}
+
+.overlay-menu {
+    width: 30%;
+    padding: 50px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    background-color: #fff;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all ease-in-out 0.5s;
+    overflow: hidden;
+}
+
+.overlay-menu .closeBtn {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.overlay-menu-link ul {
+    padding-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.overlay-menu-link ul li {
+    padding: 20px;
+    margin: 0;
+}
+
+.overlay-menu-link ul li a {
+    color: #000;
+    margin: 0;
+}
+
+.overlay-menu-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.overlay-menu-btn .btn {
+    margin: 10px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+
+    header {
+        position: relative;
+    }
+
+    .burger-btn {
+        display: inline-block;
+    }
+
+    .nav-link {
+        display: none;
+    }
+    .nav-link_buttons {
+        display: none;
+    }
+
+    .overlay-menu {
+        width: 30%;
+        text-align: center;
+    }
+    
+    .overlay-menu.active {
+        right: 0;
+    }
+
+    .burger-btn {
+        position: absolute;
+        right: 50px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .meeting {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .meeting .meeting-card {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #757474;
+    }
+    
+    
+    .meeting-card h4 {
+        font-size: 20px;
+    }
+    
+    .meeting-card img {
+        width: 40%;
+        height: 250px;
+        border-radius: 10px;
+    }
+    
+    .meeting-card div {
+        padding: 30px;
+    }
+    
+    .meeting-card h5 {
+        font-size: 15px;
+        margin: 10px 0 25px 0;
+    }
+    
+    
+    .meeting-card .meeting-card-info p {
+        font-size: 22px;
+    }
+
+
+    .package button {
+        position: static;
+        right: 0;
+    }
+    
+    .worker .user {
+        height: 250px;
+    }
+
+    .worker .user-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .services .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1155px) and (min-width: 800px) {
+
+    .overlay-menu {
+        width: 30%;
+        text-align: center;
+    }
+
+    .overlay-menu.active {
+        right: 0;
+    }
+
+    .burger-btn {
+        display: flex;
+        position: absolute;
+        right: 50px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .nav-link {
+        display: none;
+    }
+    
+    .nav-link_buttons {
+        display: none;
+    }
+
+    header .flex {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .meeting .meeting-card {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #757474;
+    }
+
+    .meeting .meeting-card-info {
+        order: 2;
+    }
+
+    .meeting .meeting-card img {
+        width: 100%;
+        order: 1;
+    }
+
+    .worker {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .worker .user {
+        margin-right: 0;
+        gap: 0;
+        width: 100%;
+        height: 250px;
+    }
+
+    #services .flex {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .package {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .package img {
+        width: 100%;
+    }
+
+    .retro-album {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .retro-album_card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 400px) {
+
+    .overlay-menu.active {
+        right: 0;
+    }
+
+    .burger-btn {
+        display: flex;
+        position: absolute;
+        right: 50px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+
+    .nav-link {
+        display: none;
+    }
+    
+    .nav-link_buttons {
+        display: none;
+    }
+
+    .retro-album {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .retro-album_card {
+        width: 100%;
+    }
+
+    #services .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .meeting .meeting-card {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #757474;
+    }
+
+    .meeting .meeting-card-info {
+        order: 2;
+    }
+
+    .meeting .meeting-card img {
+        width: 100%;
+        order: 1;
+    }
+
+    .package {
+        margin: 0;
+        text-align: center;
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .package img {
+        width: 100%;
+    }
+
+    .worker {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .worker .user {
+        margin-right: 0;
+        gap: 0;
+        width: 100%;
+        height: 250px;
+    }
+
+    .footer .footer-inner {
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .footer ul {
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 750px) and (min-width: 300px) {
+    
+    .overlay-menu {
+        width: 40%;
+        text-align: center;
+    }
+
+    .overlay-menu.active {
+        right: 0;
+    }
+
+    .burger-btn {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .burger-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    #services .package {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #services .package button {
+        position: static;
+    }
+
+    .retro-album {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .retro-album_card {
+        width: 100%;
+    }
+
+    .meeting .meeting-card {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #757474;
+    }
+
+    .meeting .meeting-card-info {
+        order: 2;
+    }
+
+    .meeting .meeting-card img {
+        width: 100%;
+        order: 1;
+    }
+
+    .worker .user {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .worker .user img {
+        margin-bottom: 20px;
+    }
+
+    .footer .footer-inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer .footer-inner p {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 300px) and (min-width: 200px) {
+    
+    .overlay-menu {
+        display: block;
+    }
+
+    .burger-btn {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .burger-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #services .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #services .package {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #services .package button {
+        position: static;
+    }
+
+    .retro-album {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .retro-album_card {
+        width: 100%;
+    }
+
+    .meeting .meeting-card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #757474;
+    }
+
+    .meeting .meeting-card-info {
+        order: 2;
+    }
+
+    .meeting .meeting-card img {
+        width: 100%;
+        order: 1;
+    }
+
+    .worker .user {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .worker .user img {
+        margin-bottom: 20px;
+    }
+
+    .footer .footer-inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer .footer-inner p {
+        margin-bottom: 50px;
+    }
 }

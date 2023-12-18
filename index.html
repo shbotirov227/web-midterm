@@ -4,10 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MODUL 3</title>
-
+        <title>MidTerm</title>
         <link rel="stylesheet" href="./style.css" />
-        <!-- <link rel="stylesheet" href="2.css" /> -->
     </head>
     <body>
         <header>
@@ -24,14 +22,32 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="nav-link_buttons">
                         <a href="#" class="btn login">Log in</a>
                         <a href="#" class="btn signup">Sign up</a>
                     </div>
 
-                    <input type="checkbox" name="checkbox" id="click" />
+                    <button onclick="clicked()" class="burger-btn"><img src="./img/burgerBtn.png" alt="" width="40" height="40"></button>
+
+                    <div class="overlay-menu">
+                        <button onclick="remove()" class="closeBtn">X</button>
+                        <div class="overlay-menu-link">
+                            <ul class="flex f-w-600">
+                                <li><a href="#" class="active">About</a></li>
+                                <li><a href="#">Service</a></li>
+                                <li><a href="#">Work</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+    
+                        <div class="overlay-menu-btn">
+                            <a href="#" class="btn login">Log in</a>
+                            <a href="#" class="btn signup">Sign up</a>
+                        </div>
+                    </div>
+
                 </div>
-                <!-- content  -->
                 <div class="content flex align-center">
                     <div class="left flex2">
                         <h2 class="block letter-spacing2">
@@ -82,18 +98,76 @@
                     <button>Get Debut</button>
                 </div>
             </div>
-
-            <!-- Add more packages as needed -->
         </section>
 
-        <!-- about section start  -->
+        
+
+        <section class="meeting container">
+
+            <div class="meeting-card">
+                <div class="meeting-card-info">
+                    <h4>The New York City Live Music Meetup</h4>
+                    <h5 class="meeting-card-date">16,024 Live Music Fans | New York, USA</h5>
+                    <p>Organized by David Greene</p>
+                </div>
+                <img src="./img/event.webp" alt="">
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-card-info">
+                    <h4>The New York City Live Music Meetup</h4>
+                    <h5 class="meeting-card-date">16,024 Live Music Fans | New York, USA</h5>
+                    <p>Organized by David Greene</p>
+                </div>
+                <img src="./img/event2.webp" alt="">
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-card-info">
+                    <h4>The New York City Live Music Meetup</h4>
+                    <h5 class="meeting-card-date">16,024 Live Music Fans | New York, USA</h5>
+                    <p>Organized by David Greene</p>
+                </div>
+                <img src="./img/event3.webp" alt="">
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-card-info">
+                    <h4>The New York City Live Music Meetup</h4>
+                    <h5 class="meeting-card-date">16,024 Live Music Fans | New York, USA</h5>
+                    <p>Organized by David Greene</p>
+                </div>
+                <img src="./img/event4.webp" alt="">
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-card-info">
+                    <h4>The New York City Live Music Meetup</h4>
+                    <h5 class="meeting-card-date">16,024 Live Music Fans | New York, USA</h5>
+                    <p>Organized by David Greene</p>
+                </div>
+                <img src="./img/event5.webp" alt="">
+            </div>
+
+            <div class="meeting-card">
+                <div class="meeting-card-info">
+                    <h4>The New York City Live Music Meetup</h4>
+                    <h5 class="meeting-card-date">16,024 Live Music Fans | New York, USA</h5>
+                    <p>Organized by David Greene</p>
+                </div>
+                <img src="./img/event6.webp" alt="">
+            </div>
+
+        </section>
+
+
+
         <section class="about-me-sec">
             <div class="container">
                 <div class="about-sec help">
                     <h3 class="gap1 pd-t-30 text-center">What we do</h3>
 
                     <div class="about-content flex justify-center align-center">
-                        <!-- left side  -->
                         <div class="left flex2">
                             <h5 class="gap2 letter-spacing2">About us</h5>
                             <div class="section__text">
@@ -115,65 +189,70 @@
                         <h3 class="gap3 text-center pd-30">
                             Popular retro Albums
                         </h3>
-                        <div
-                            class="empty_album flex justify-center align-center text-center"
-                        >
-                            <div class="first">
-                                <img
-                                    src="img/vinylPlastinka1.webp"
-                                    alt=""
-                                    width="200px"
-                                    height="300px"
-                                />
+                        <div class="retro-album flex justify-center align-center text-center">
+                            <div class="retro-album_card">
+                                <img src="img/vinylPlastinka1.webp" alt="" width="200px" height="300px" />
+                                <h4>Retro album</h4>
+                                <p>Released May, 1980</p>
+                                
+                                <div class="flex align-center">
+                                    <div>
+                                        <span>10.50$</span>
+                                        <del>12.20$</del>
+                                    </div>
+
+                                    <button class="btn">Buy</button>
+                                </div>
                             </div>
-                            <div class="first">
-                                <img
-                                    src="img/vinylPlastinka2.webp"
-                                    alt=""
-                                    width="200px"
-                                    height="300px"
-                                />
+                            <div class="retro-album_card">
+                                <img src="img/vinylPlastinka2.webp" alt="" width="200px" height="300px" />
+                                <h4>Retro album</h4>
+                                <p>Released May, 1980</p>
+                                
+                                <div class="flex align-center">
+                                    <div>
+                                        <span>10.50$</span>
+                                        <del>12.20$</del>
+                                    </div>
+
+                                    <button class="btn">Buy</button>
+                                </div>
                             </div>
-                            <div class="first">
-                                <img
-                                    src="img/vinylPlastinka3.webp"
-                                    alt=""
-                                    width="200px"
-                                    height="300px"
-                                />
+                            <div class="retro-album_card">
+                                <img src="img/vinylPlastinka3.webp" alt="" width="200px" height="300px" />
+                                <h4>Retro album</h4>
+                                <p>Released May, 1980</p>
+                                
+                                <div class="flex align-center">
+                                    <div>
+                                        <span>10.50$</span>
+                                        <del>12.20$</del>
+                                    </div>
+
+                                    <button class="btn">Buy</button>
+                                </div>
                             </div>
+
+                            <div class="retro-album_card">
+                                <img src="img/vinylPlastinka2.webp" alt="" width="200px" height="300px" />
+                                <h4>Retro album</h4>
+                                <p>Released May, 1980</p>
+                                
+                                <div class="flex align-center">
+                                    <div>
+                                        <span>10.50$</span>
+                                        <del>12.20$</del>
+                                    </div>
+
+                                    <button class="btn">Buy</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- <section class="section__items">
-            <div class="section_in help container">
-                <h3 class="block pd-30 text-center">Our experience</h3>
-                <div class="section__blok flex space-between text-center">
-                    <div class="kolvo">
-                        <h3 class="ola">10+</h3>
-                        <p>Hamkorlar</p>
-                    </div>
-
-                    <div class="kolvo">
-                        <h3 class="ola">50+</h3>
-                        <p>Filiallar</p>
-                    </div>
-
-                    <div class="kolvo">
-                        <h3 class="ola">15+</h3>
-                        <p>Yutuqlar</p>
-                    </div>
-
-                    <div class="kolvo">
-                        <h3 class="ola">500+</h3>
-                        <p>Doimiy kliyentlar</p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
         <section class="workers">
                 <h2 class="text-center title">Workers</h2>
@@ -295,34 +374,8 @@
                     <li><a href="#" class="footer-link">Terms & conditions</a></li>
                     <li><a href="#" class="footer-link">Privacy Policy</a></li>
                 </ul>
-
-                    <!-- <div class="down__case">
-                        <h5 class="prototype">Manzil</h5>
-                        <p>PDP university<br /></p>
-                    </div>
-
-                    <div class="down__case1">
-                        <h5 class="prototype">Contact</h5>
-                        <p>tel: +998950537111</p>
-                    </div>
-                    <div class="down__case">
-                        <div class="down__case">
-                            <h5 class="prototype">Email Id</h5>
-                            <p>pdpuniversity@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="down__case">
-                        <h5 class="prototype">Email adress</h5>
-
-                        <div class="right_side text-center">
-                            <form action="">
-                                Email : <input type="email" id="email-id" />
-                                <br />
-                                <button class="btn">Log in</button>
-                            </form>
-                        </div>
-                    </div> -->
             </div>
         </footer>
+        <script src="./index.js"></script>
     </body>
 </html>
